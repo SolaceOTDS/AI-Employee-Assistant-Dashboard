@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Employee Assistant</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+
+    <script src="JS/main.js" defer></script>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">AI</div>
+                <div>
+                    <h2>AI Assistant</h2>
+                    <span>Employee Portal</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <p class="nav-title">MAIN</p>
+
+                <a href="index.html" class="nav-item active">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="chat.html" class="nav-item">
+                    <span>✦</span>
+                    AI Chat
+                </a>
+
+                <a href="prompts.html" class="nav-item">
+                    <span>▣</span>
+                    Prompt Library
+                </a>
+
+                <p class="nav-title">RESOURCES</p>
+
+                <a href="knowledge.html" class="nav-item">
+                    <span>◈</span>
+                    Knowledge Base
+                </a>
+
+                <a href="docs.html" class="nav-item">
+                    <span>▤</span>
+                    Documentation
+                </a>
+
+                <a href="analytics.html" class="nav-item">
+                    <span>◒</span>
+                    Analytics
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="settings.html" class="nav-item">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+                <div class="user-mini">
+                    <div class="avatar">RG</div>
+                    <div>
+                        <strong>Rishik</strong>
+                        <small>Employee</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- Main Area -->
+        <main class="main">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+
+                <div class="page-info">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back to your workspace.</p>
+                </div>
+
+                <div class="topbar-actions">
+                    <button class="icon-btn">⌕</button>
+                    <button class="icon-btn">♢</button>
+
+                    <div class="profile">
+                        <div class="avatar">RG</div>
+                        <div>
+                            <strong>Rishik Gouda</strong>
+                            <small>Employee</small>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- Page Content -->
+            <section class="content">
+
+                <div class="welcome">
+                    <div>
+                        <span class="eyebrow">OVERVIEW</span>
+                        <h2>Good morning, Rishik 👋</h2>
+                        <p>Here's what's happening in your workspace today.</p>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <span>AI Requests</span>
+                        <strong>127</strong>
+                        <small>↑ 12% this week</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Documents</span>
+                        <strong>48</strong>
+                        <small>8 updated recently</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Tasks Today</span>
+                        <strong>08</strong>
+                        <small>3 completed</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Productivity</span>
+                        <strong>86%</strong>
+                        <small>↑ 5% this month</small>
+                    </div>
+
+                </div>
+                <!-- Dashboard Lower Section -->
+<div class="dashboard-grid">
+
+    <!-- Recent Activity -->
+    <div class="dashboard-card activity-card">
+
+        <div class="card-header">
+            <div>
+                <span class="card-label">ACTIVITY</span>
+                <h3>Recent Activity</h3>
+            </div>
+
+            <a href="analytics.html" class="view-link">View all →</a>
+        </div>
+
+        <div class="activity-list">
+
+            <div class="activity-item">
+                <div class="activity-icon blue">✦</div>
+                <div class="activity-info">
+                    <strong>AI prompt generated</strong>
+                    <span>You generated a project summary</span>
+                </div>
+                <small>5 min ago</small>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon green">✓</div>
+                <div class="activity-info">
+                    <strong>Document viewed</strong>
+                    <span>Employee Guidelines.pdf</span>
+                </div>
+                <small>32 min ago</small>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon purple">▤</div>
+                <div class="activity-info">
+                    <strong>Prompt copied</strong>
+                    <span>Meeting Summary prompt</span>
+                </div>
+                <small>1 hr ago</small>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon orange">◈</div>
+                <div class="activity-info">
+                    <strong>Knowledge article opened</strong>
+                    <span>IT Support Guidelines</span>
+                </div>
+                <small>2 hrs ago</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- AI Assistant -->
+    <div class="dashboard-card assistant-card">
+
+        <div class="card-header">
+            <div>
+                <span class="card-label">AI ASSISTANT</span>
+                <h3>How can I help?</h3>
+            </div>
+
+            <div class="ai-status">
+                <span></span>
+                Online
+            </div>
+        </div>
+
+        <p class="assistant-text">
+            Ask the AI assistant to help you find information,
+            summarize documents, or create content.
+        </p>
+
+        <div class="quick-prompts">
+
+            <a href="chat.html" class="quick-prompt">
+                <span>✦</span>
+                Summarize a document
+            </a>
+
+            <a href="chat.html" class="quick-prompt">
+                <span>✉</span>
+                Write an email
+            </a>
+
+            <a href="chat.html" class="quick-prompt">
+                <span>▣</span>
+                Create a report
+            </a>
+
+            <a href="chat.html" class="quick-prompt">
+                <span>?</span>
+                Ask a question
+            </a>
+
+        </div>
+
+        <a href="chat.html" class="assistant-button">
+            Open AI Assistant
+            <span>→</span>
+        </a>
+
+    </div>
+
+</div>
+
+            </section>
+            <footer class="dashboard-footer">
+                <span>AI Employee Assistant</span>
+                <span>Frontend Prototype • 2026</span>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
