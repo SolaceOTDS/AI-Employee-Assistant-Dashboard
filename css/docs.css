@@ -115,16 +115,29 @@
     }
 
     .docs-layout {
-        grid-template-columns: 1fr;
+        display: block;
+        width: 100%;
     }
 
     .docs-sidebar {
         position: static;
+        width: 100%;
+        margin-bottom: 25px;
     }
 
     .docs-link {
         display: inline-block;
         margin-right: 4px;
+        margin-bottom: 4px;
+    }
+
+    .docs-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .doc-section {
+        width: 100%;
     }
 
 }
