@@ -285,37 +285,71 @@ button {
 }
 
 @media (max-width: 700px) {
+
+    .app {
+        display: block;
+    }
+
     .sidebar {
-        width: 70px;
-        padding: 20px 10px;
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
     }
 
     .logo {
-        justify-content: center;
-        padding: 0 0 25px;
+        justify-content: flex-start;
+        padding: 5px 8px 12px;
     }
 
-    .logo h2,
-    .logo span,
-    .nav-item {
-        font-size: 0;
-    }
-
-    .nav-item span {
+    .logo h2 {
         font-size: 16px;
-        margin: auto;
     }
 
-    .user-mini {
-        justify-content: center;
+    .logo span {
+        font-size: 11px;
     }
 
-    .user-mini > div:last-child {
+    .sidebar-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .nav-title {
         display: none;
     }
 
+    .nav-item {
+        font-size: 12px;
+        padding: 8px 10px;
+        margin: 0;
+        gap: 6px;
+    }
+
+    .nav-item span {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
     .topbar {
-        padding: 0 18px;
+        height: auto;
+        min-height: 70px;
+        padding: 14px 18px;
+        gap: 12px;
+    }
+
+    .topbar h1 {
+        font-size: 18px;
+    }
+
+    .profile {
+        padding-left: 8px;
     }
 
     .profile > div:last-child {
