@@ -1,74 +1,76 @@
-const dashboardData = {
-  aiRequests: 127,
-  aiRequestsChange: "↑ 12% this week",
+if (document.getElementById("aiRequests")) {
+  const dashboardData = {
+    aiRequests: 127,
+    aiRequestsChange: "↑ 12% this week",
 
-  documents: 48,
-  documentsChange: "8 updated recently",
+    documents: 48,
+    documentsChange: "8 updated recently",
 
-  tasksToday: "08",
-  tasksChange: "3 completed",
+    tasksToday: "08",
+    tasksChange: "3 completed",
 
-  productivity: "86%",
-  productivityChange: "↑ 5% this month",
-};
+    productivity: "86%",
+    productivityChange: "↑ 5% this month",
+  };
 
-document.getElementById("aiRequests").textContent = dashboardData.aiRequests;
+  document.getElementById("aiRequests").textContent = dashboardData.aiRequests;
 
-document.getElementById("aiRequestsChange").textContent =
-  dashboardData.aiRequestsChange;
+  document.getElementById("aiRequestsChange").textContent =
+    dashboardData.aiRequestsChange;
 
-document.getElementById("documents").textContent = dashboardData.documents;
+  document.getElementById("documents").textContent = dashboardData.documents;
 
-document.getElementById("documentsChange").textContent =
-  dashboardData.documentsChange;
+  document.getElementById("documentsChange").textContent =
+    dashboardData.documentsChange;
 
-document.getElementById("tasksToday").textContent = dashboardData.tasksToday;
+  document.getElementById("tasksToday").textContent = dashboardData.tasksToday;
 
-document.getElementById("tasksChange").textContent = dashboardData.tasksChange;
+  document.getElementById("tasksChange").textContent =
+    dashboardData.tasksChange;
 
-document.getElementById("productivity").textContent =
-  dashboardData.productivity;
+  document.getElementById("productivity").textContent =
+    dashboardData.productivity;
 
-document.getElementById("productivityChange").textContent =
-  dashboardData.productivityChange;
-const recentActivity = [
-  {
-    icon: "✦",
-    iconClass: "blue",
-    title: "AI prompt generated",
-    description: "You generated a project summary",
-    time: "5 min ago",
-  },
-  {
-    icon: "✓",
-    iconClass: "green",
-    title: "Document viewed",
-    description: "Employee Guidelines.pdf",
-    time: "32 min ago",
-  },
-  {
-    icon: "▤",
-    iconClass: "purple",
-    title: "Prompt copied",
-    description: "Meeting Summary prompt",
-    time: "1 hr ago",
-  },
-  {
-    icon: "◈",
-    iconClass: "orange",
-    title: "Knowledge article opened",
-    description: "IT Support Guidelines",
-    time: "2 hrs ago",
-  },
-];
+  document.getElementById("productivityChange").textContent =
+    dashboardData.productivityChange;
+  const recentActivity = [
+    {
+      icon: "✦",
+      iconClass: "blue",
+      title: "AI prompt generated",
+      description: "You generated a project summary",
+      time: "5 min ago",
+    },
+    {
+      icon: "✓",
+      iconClass: "green",
+      title: "Document viewed",
+      description: "Employee Guidelines.pdf",
+      time: "32 min ago",
+    },
+    {
+      icon: "▤",
+      iconClass: "purple",
+      title: "Prompt copied",
+      description: "Meeting Summary prompt",
+      time: "1 hr ago",
+    },
+    {
+      icon: "◈",
+      iconClass: "orange",
+      title: "Knowledge article opened",
+      description: "IT Support Guidelines",
+      time: "2 hrs ago",
+    },
+  ];
 
-const activityList = document.getElementById("activityList");
+  const activityList = document.getElementById("activityList");
 
-recentActivity.forEach(function (activity) {
-  const item = document.createElement("div");
-  item.className = "activity-item";
+  recentActivity.forEach(function (activity) {
+    const item = document.createElement("div");
+    item.className = "activity-item";
 
-  item.innerHTML = `
+    item.innerHTML = `
         <div class="activity-icon ${activity.iconClass}">
             ${activity.icon}
         </div>
@@ -81,5 +83,6 @@ recentActivity.forEach(function (activity) {
         <small>${activity.time}</small>
     `;
 
-  activityList.appendChild(item);
-});
+    activityList.appendChild(item);
+  });
+}
