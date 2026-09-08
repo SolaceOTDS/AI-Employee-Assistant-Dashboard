@@ -107,3 +107,10 @@ if (selectedPrompt) {
   chatInput.value = selectedPrompt;
   chatInput.focus();
 }
+const chatSuggestions = document.getElementById("chatSuggestions");
+
+const savedSettings = JSON.parse(localStorage.getItem("settings")) || {};
+
+if (savedSettings.promptSuggestions === false) {
+  chatSuggestions.style.display = "none";
+}
