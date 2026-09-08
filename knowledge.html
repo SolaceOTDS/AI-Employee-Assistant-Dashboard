@@ -1,294 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Knowledge Base | AI Employee Assistant</title>
 
-    <link rel="stylesheet" href="css/style.css?v=2">
-    <link rel="stylesheet" href="css/knowledge.css?v=2">
+    <link rel="stylesheet" href="css/style.css?v=2" />
+    <link rel="stylesheet" href="css/knowledge.css?v=2" />
 
     <script src="js/main.js" defer></script>
     <script src="js/knowledge.js" defer></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="app">
+      <aside class="sidebar">
+        <div class="logo">
+          <div class="logo-icon">AI</div>
 
-        <aside class="sidebar">
+          <div>
+            <h2>AI Assistant</h2>
+            <span>Employee Dashboard</span>
+          </div>
+        </div>
 
-            <div class="logo">
-                <div class="logo-icon">AI</div>
+        <nav class="sidebar-nav">
+          <p class="nav-title">MAIN</p>
 
-                <div>
-                    <h2>AI Assistant</h2>
-                    <span>Employee Dashboard</span>
-                </div>
+          <a href="index.html" class="nav-item">
+            <span>⌂</span>
+            Dashboard
+          </a>
+
+          <a href="chat.html" class="nav-item">
+            <span>✦</span>
+            AI Chat
+          </a>
+
+          <p class="nav-title">WORKSPACE</p>
+
+          <a href="prompts.html" class="nav-item">
+            <span>▤</span>
+            Prompt Library
+          </a>
+
+          <a href="knowledge.html" class="nav-item active">
+            <span>◈</span>
+            Knowledge Base
+          </a>
+
+          <a href="docs.html" class="nav-item">
+            <span>▱</span>
+            Documentation
+          </a>
+
+          <p class="nav-title">SYSTEM</p>
+
+          <a href="analytics.html" class="nav-item">
+            <span>◫</span>
+            Analytics
+          </a>
+
+          <a href="settings.html" class="nav-item">
+            <span>⚙</span>
+            Settings
+          </a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1>Knowledge Base</h1>
+            <p>Organize information for AI-assisted workplace tasks</p>
+          </div>
+
+          <div class="profile">
+            <div class="avatar">RG</div>
+
+            <div>
+              <strong>Rishik</strong>
+              <small>Employee</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="knowledge-container">
+          <div class="knowledge-header">
+            <div>
+              <h2>Knowledge Resources</h2>
+              <p>Browse sample documents and workplace information.</p>
             </div>
 
-            <nav class="sidebar-nav">
+            <button class="add-resource" id="addResourceBtn">
+              + Add Resource
+            </button>
+          </div>
+          <div class="new-resource-form" id="newResourceForm">
+            <div class="new-resource-header">
+              <div>
+                <h3>Add Knowledge Resource</h3>
+                <p>Add a custom resource to your knowledge base.</p>
+              </div>
+            </div>
 
-                <p class="nav-title">MAIN</p>
+            <div class="new-resource-fields">
+              <div>
+                <label for="resourceName">Resource Name</label>
+                <input
+                  type="text"
+                  id="resourceName"
+                  placeholder="e.g. Meeting Guidelines"
+                />
+              </div>
 
-                <a href="index.html" class="nav-item">
-                    <span>⌂</span>
-                    Dashboard
-                </a>
+              <div>
+                <label for="resourceCategory">Category</label>
+                <select id="newResourceCategory">
+                  <option value="Workplace">Workplace</option>
+                  <option value="Employee Resources">Employee Resources</option>
+                  <option value="Technical">Technical</option>
+                  <option value="Projects">Projects</option>
+                  <option value="Learning">Learning</option>
+                  <option value="Systems">Systems</option>
+                </select>
+              </div>
 
-                <a href="chat.html" class="nav-item">
-                    <span>✦</span>
-                    AI Chat
-                </a>
+              <div>
+                <label for="resourceText">Description</label>
+                <textarea
+                  id="resourceText"
+                  placeholder="Describe the information contained in this resource..."
+                ></textarea>
+              </div>
+            </div>
 
-                <p class="nav-title">WORKSPACE</p>
+            <div class="new-resource-actions">
+              <button class="cancel-resource" id="cancelResourceBtn">
+                Cancel
+              </button>
 
-                <a href="prompts.html" class="nav-item">
-                    <span>▤</span>
-                    Prompt Library
-                </a>
+              <button class="save-resource" id="saveResourceBtn">
+                Add Resource
+              </button>
+            </div>
+          </div>
 
-                <a href="knowledge.html" class="nav-item active">
-                    <span>◈</span>
-                    Knowledge Base
-                </a>
+          <div class="knowledge-search">
+            <input
+              type="text"
+              id="knowledgeSearch"
+              placeholder="Search knowledge resources..."
+            />
+          </div>
 
-                <a href="docs.html" class="nav-item">
-                    <span>▱</span>
-                    Documentation
-                </a>
+          <div class="knowledge-grid">
+            <div class="knowledge-card" data-resource="company-policies">
+              <div class="knowledge-icon">▤</div>
 
-                <p class="nav-title">SYSTEM</p>
+              <div class="knowledge-content">
+                <h3>Company Policies</h3>
 
-                <a href="analytics.html" class="nav-item">
-                    <span>◫</span>
-                    Analytics
-                </a>
+                <p>
+                  General workplace policies, guidelines, and employee
+                  procedures.
+                </p>
 
-                <a href="settings.html" class="nav-item">
-                    <span>⚙</span>
-                    Settings
-                </a>
-
-            </nav>
-
-        </aside>
-
-
-        <main class="main">
-
-            <header class="topbar">
-
-                <div>
-                    <h1>Knowledge Base</h1>
-                    <p>Organize information for AI-assisted workplace tasks</p>
+                <div class="knowledge-meta">
+                  <span>12 Documents</span>
+                  <span>Updated recently</span>
                 </div>
+              </div>
+            </div>
 
-                <div class="profile">
-                    <div class="avatar">RG</div>
+            <div class="knowledge-card" data-resource="employee-handbook">
+              <div class="knowledge-icon">◈</div>
 
-                    <div>
-                        <strong>Rishik</strong>
-                        <small>Employee</small>
-                    </div>
+              <div class="knowledge-content">
+                <h3>Employee Handbook</h3>
+
+                <p>
+                  Information about workplace practices, responsibilities, and
+                  company guidelines.
+                </p>
+
+                <div class="knowledge-meta">
+                  <span>8 Documents</span>
+                  <span>Updated recently</span>
                 </div>
+              </div>
+            </div>
 
-            </header>
+            <div class="knowledge-card" data-resource="technical-resources">
+              <div class="knowledge-icon">◫</div>
 
+              <div class="knowledge-content">
+                <h3>Technical Resources</h3>
 
-            <section class="knowledge-container">
+                <p>
+                  Technical documentation and resources used for common
+                  workplace tasks.
+                </p>
 
-                <div class="knowledge-header">
-
-                    <div>
-                        <h2>Knowledge Resources</h2>
-                        <p>
-                            Browse sample documents and workplace information.
-                        </p>
-                    </div>
-
-                    <button class="add-resource">
-                        + Add Resource
-                    </button>
-
+                <div class="knowledge-meta">
+                  <span>15 Documents</span>
+                  <span>Updated recently</span>
                 </div>
+              </div>
+            </div>
 
+            <div class="knowledge-card" data-resource="project-information">
+              <div class="knowledge-icon">▥</div>
 
-                <div class="knowledge-search">
+              <div class="knowledge-content">
+                <h3>Project Information</h3>
 
-                    <input
-                        type="text"
-                        id="knowledgeSearch"
-                        placeholder="Search knowledge resources..."
-                    >
+                <p>
+                  Sample project details, requirements, notes, and supporting
+                  information.
+                </p>
 
+                <div class="knowledge-meta">
+                  <span>7 Documents</span>
+                  <span>Updated recently</span>
                 </div>
+              </div>
+            </div>
 
+            <div class="knowledge-card" data-resource="training-materials">
+              <div class="knowledge-icon">✓</div>
 
-                <div class="knowledge-grid">
+              <div class="knowledge-content">
+                <h3>Training Materials</h3>
 
-                    <div class="knowledge-card">
+                <p>
+                  Learning resources and training material for employee
+                  development.
+                </p>
 
-                        <div class="knowledge-icon">
-                            ▤
-                        </div>
-
-                        <div class="knowledge-content">
-
-                            <h3>Company Policies</h3>
-
-                            <p>
-                                General workplace policies, guidelines,
-                                and employee procedures.
-                            </p>
-
-                            <div class="knowledge-meta">
-                                <span>12 Documents</span>
-                                <span>Updated recently</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="knowledge-card">
-
-                        <div class="knowledge-icon">
-                            ◈
-                        </div>
-
-                        <div class="knowledge-content">
-
-                            <h3>Employee Handbook</h3>
-
-                            <p>
-                                Information about workplace practices,
-                                responsibilities, and company guidelines.
-                            </p>
-
-                            <div class="knowledge-meta">
-                                <span>8 Documents</span>
-                                <span>Updated recently</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="knowledge-card">
-
-                        <div class="knowledge-icon">
-                            ◫
-                        </div>
-
-                        <div class="knowledge-content">
-
-                            <h3>Technical Resources</h3>
-
-                            <p>
-                                Technical documentation and resources
-                                used for common workplace tasks.
-                            </p>
-
-                            <div class="knowledge-meta">
-                                <span>15 Documents</span>
-                                <span>Updated recently</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="knowledge-card">
-
-                        <div class="knowledge-icon">
-                            ▥
-                        </div>
-
-                        <div class="knowledge-content">
-
-                            <h3>Project Information</h3>
-
-                            <p>
-                                Sample project details, requirements,
-                                notes, and supporting information.
-                            </p>
-
-                            <div class="knowledge-meta">
-                                <span>7 Documents</span>
-                                <span>Updated recently</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="knowledge-card">
-
-                        <div class="knowledge-icon">
-                            ✓
-                        </div>
-
-                        <div class="knowledge-content">
-
-                            <h3>Training Materials</h3>
-
-                            <p>
-                                Learning resources and training material
-                                for employee development.
-                            </p>
-
-                            <div class="knowledge-meta">
-                                <span>10 Documents</span>
-                                <span>Updated recently</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="knowledge-card">
-
-                        <div class="knowledge-icon">
-                            ⚙
-                        </div>
-
-                        <div class="knowledge-content">
-
-                            <h3>System Guides</h3>
-
-                            <p>
-                                Sample guides explaining common systems,
-                                tools, and workplace processes.
-                            </p>
-
-                            <div class="knowledge-meta">
-                                <span>6 Documents</span>
-                                <span>Updated recently</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                <div class="knowledge-meta">
+                  <span>10 Documents</span>
+                  <span>Updated recently</span>
                 </div>
+              </div>
+            </div>
 
-            </section>
+            <div class="knowledge-card" data-resource="system-guides">
+              <div class="knowledge-icon">⚙</div>
 
+              <div class="knowledge-content">
+                <h3>System Guides</h3>
 
-            <footer class="footer">
-                <p>AI Employee Assistant Dashboard · Frontend Prototype</p>
-            </footer>
+                <p>
+                  Sample guides explaining common systems, tools, and workplace
+                  processes.
+                </p>
 
-        </main>
+                <div class="knowledge-meta">
+                  <span>6 Documents</span>
+                  <span>Updated recently</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="resource-panel" id="resourcePanel">
+            <div class="resource-panel-header">
+              <div>
+                <span id="resourceCategory">Knowledge Resource</span>
+                <h2 id="resourceTitle">Resource Title</h2>
+              </div>
+
+              <button id="closeResource">✕</button>
+            </div>
+
+            <div class="resource-panel-content">
+              <p id="resourceDescription"></p>
+
+              <h3>Key Information</h3>
+
+              <ul id="resourceDetails"></ul>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <p>AI Employee Assistant Dashboard · Frontend Prototype</p>
+        </footer>
+      </main>
     </div>
-
-</body>
+  </body>
 </html>

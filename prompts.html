@@ -1,243 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prompt Library | AI Employee Assistant</title>
 
-    <link rel="stylesheet" href="css/style.css?v=2">
-    <link rel="stylesheet" href="css/prompts.css?v=2">
+    <link rel="stylesheet" href="css/style.css?v=2" />
+    <link rel="stylesheet" href="css/prompts.css?v=2" />
 
     <script src="js/main.js" defer></script>
     <script src="js/prompts.js" defer></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="app">
-
-        <aside class="sidebar">
-
+      <aside class="sidebar">
         <div class="logo">
-            <div class="logo-icon">AI</div>
-            <div>
-                <h2>AI Assistant</h2>
-                <span>Employee Dashboard</span>
-            </div>
+          <div class="logo-icon">AI</div>
+          <div>
+            <h2>AI Assistant</h2>
+            <span>Employee Dashboard</span>
+          </div>
         </div>
 
         <nav class="sidebar-nav">
+          <p class="nav-title">MAIN</p>
 
-            <p class="nav-title">MAIN</p>
+          <a href="index.html" class="nav-item">
+            <span>⌂</span>
+            Dashboard
+          </a>
 
-            <a href="index.html" class="nav-item">
-                <span>⌂</span>
-                Dashboard
-            </a>
+          <a href="chat.html" class="nav-item">
+            <span>✦</span>
+            AI Chat
+          </a>
 
-            <a href="chat.html" class="nav-item">
-                <span>✦</span>
-                AI Chat
-            </a>
+          <p class="nav-title">WORKSPACE</p>
 
-            <p class="nav-title">WORKSPACE</p>
+          <a href="prompts.html" class="nav-item active">
+            <span>▤</span>
+            Prompt Library
+          </a>
 
-            <a href="prompts.html" class="nav-item active">
-                <span>▤</span>
-                Prompt Library
-            </a>
+          <a href="knowledge.html" class="nav-item">
+            <span>◈</span>
+            Knowledge Base
+          </a>
 
-            <a href="knowledge.html" class="nav-item">
-                <span>◈</span>
-                Knowledge Base
-            </a>
+          <a href="docs.html" class="nav-item">
+            <span>▱</span>
+            Documentation
+          </a>
 
-            <a href="docs.html" class="nav-item">
-                <span>▱</span>
-                Documentation
-            </a>
+          <p class="nav-title">SYSTEM</p>
 
-            <p class="nav-title">SYSTEM</p>
+          <a href="analytics.html" class="nav-item">
+            <span>◫</span>
+            Analytics
+          </a>
 
-            <a href="analytics.html" class="nav-item">
-                <span>◫</span>
-                Analytics
-            </a>
-
-            <a href="settings.html" class="nav-item">
-                <span>⚙</span>
-                Settings
-            </a>
-
+          <a href="settings.html" class="nav-item">
+            <span>⚙</span>
+            Settings
+          </a>
         </nav>
+      </aside>
 
-    </aside>
-
-
-    <main class="main">
-        
-
+      <main class="main">
         <header class="topbar">
-            <div>
-                <h1>Prompt Library</h1>
-                <p>Reusable prompts for common workplace tasks</p>
-            </div>
+          <div>
+            <h1>Prompt Library</h1>
+            <p>Reusable prompts for common workplace tasks</p>
+          </div>
 
-            <div class="profile">
-                <div class="profile-avatar">RG</div>
-                <div>
-                    <strong>Rishik</strong>
-                    <span>Employee</span>
-                </div>
+          <div class="profile">
+            <div class="profile-avatar">RG</div>
+            <div>
+              <strong>Rishik</strong>
+              <span>Employee</span>
             </div>
+          </div>
         </header>
 
-
         <section class="prompts-container">
-
-            <div class="prompt-header">
-                <div>
-                    <h2>Saved Prompts</h2>
-                    <p>Choose a prompt to quickly start an AI-assisted task.</p>
-                </div>
-
-                <button class="create-prompt">+ New Prompt</button>
+          <div class="prompt-header">
+            <div>
+              <h2>Saved Prompts</h2>
+              <p>Choose a prompt to quickly start an AI-assisted task.</p>
             </div>
 
-
-            <div class="prompt-grid">
-
-                <div class="prompt-card">
-                    <div class="prompt-icon">✉</div>
-
-                    <div class="prompt-card-content">
-                        <h3>Professional Email</h3>
-                        <p>
-                            Draft a clear and professional workplace email
-                            based on the provided information.
-                        </p>
-
-                        <div class="prompt-footer">
-                            <span>Communication</span>
-                            <button class="use-prompt">
-                                Use Prompt
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="prompt-card">
-                    <div class="prompt-icon">▤</div>
-
-                    <div class="prompt-card-content">
-                        <h3>Document Summary</h3>
-                        <p>
-                            Summarize the provided document and highlight
-                            the most important points.
-                        </p>
-
-                        <div class="prompt-footer">
-                            <span>Documents</span>
-                            <button class="use-prompt">
-                                Use Prompt
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="prompt-card">
-                    <div class="prompt-icon">▥</div>
-
-                    <div class="prompt-card-content">
-                        <h3>Report Generator</h3>
-                        <p>
-                            Create a structured workplace report from
-                            the provided information.
-                        </p>
-
-                        <div class="prompt-footer">
-                            <span>Reports</span>
-                            <button class="use-prompt">
-                                Use Prompt
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="prompt-card">
-                    <div class="prompt-icon">?</div>
-
-                    <div class="prompt-card-content">
-                        <h3>Explain a Topic</h3>
-                        <p>
-                            Explain a technical or workplace topic in
-                            simple and easy-to-understand language.
-                        </p>
-
-                        <div class="prompt-footer">
-                            <span>Learning</span>
-                            <button class="use-prompt">
-                                Use Prompt
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="prompt-card">
-                    <div class="prompt-icon">✓</div>
-
-                    <div class="prompt-card-content">
-                        <h3>Task Planner</h3>
-                        <p>
-                            Break a workplace task into clear and
-                            manageable steps.
-                        </p>
-
-                        <div class="prompt-footer">
-                            <span>Productivity</span>
-                            <button class="use-prompt">
-                                Use Prompt
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="prompt-card">
-                    <div class="prompt-icon">⌕</div>
-
-                    <div class="prompt-card-content">
-                        <h3>Research Assistant</h3>
-                        <p>
-                            Organize a research topic into key questions,
-                            points, and useful areas to investigate.
-                        </p>
-
-                        <div class="prompt-footer">
-                            <span>Research</span>
-                            <button class="use-prompt">
-                                Use Prompt
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
+            <button class="create-prompt" id="createPromptBtn">
+              + New Prompt
+            </button>
+          </div>
+          <div class="new-prompt-form" id="newPromptForm">
+            <div class="new-prompt-header">
+              <div>
+                <h3>Create New Prompt</h3>
+                <p>Add a custom prompt to your library.</p>
+              </div>
             </div>
 
+            <div class="new-prompt-fields">
+              <div>
+                <label for="promptName">Prompt Name</label>
+                <input
+                  type="text"
+                  id="promptName"
+                  placeholder="e.g. Meeting Notes"
+                />
+              </div>
+
+              <div>
+                <label for="promptCategory">Category</label>
+                <select id="promptCategory">
+                  <option value="Communication">Communication</option>
+                  <option value="Documents">Documents</option>
+                  <option value="Reports">Reports</option>
+                  <option value="Learning">Learning</option>
+                  <option value="Productivity">Productivity</option>
+                  <option value="Research">Research</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="promptText">Prompt</label>
+                <textarea
+                  id="promptText"
+                  placeholder="Write the instruction you want the AI assistant to follow..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="new-prompt-actions">
+              <button class="cancel-prompt" id="cancelPromptBtn">Cancel</button>
+              <button class="save-prompt" id="savePromptBtn">
+                Save Prompt
+              </button>
+            </div>
+          </div>
+
+          <div class="prompt-filters">
+            <button class="filter-btn active" data-category="All">All</button>
+            <button class="filter-btn" data-category="Communication">
+              Communication
+            </button>
+            <button class="filter-btn" data-category="Documents">
+              Documents
+            </button>
+            <button class="filter-btn" data-category="Reports">Reports</button>
+            <button class="filter-btn" data-category="Learning">
+              Learning
+            </button>
+            <button class="filter-btn" data-category="Productivity">
+              Productivity
+            </button>
+            <button class="filter-btn" data-category="Research">
+              Research
+            </button>
+          </div>
+
+          <div class="prompt-grid">
+            <div class="prompt-card">
+              <div class="prompt-icon">✉</div>
+
+              <div class="prompt-card-content">
+                <h3>Professional Email</h3>
+                <p>
+                  Draft a clear and professional workplace email based on the
+                  provided information.
+                </p>
+
+                <div class="prompt-footer">
+                  <span>Communication</span>
+                  <button class="use-prompt">Use Prompt</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="prompt-card">
+              <div class="prompt-icon">▤</div>
+
+              <div class="prompt-card-content">
+                <h3>Document Summary</h3>
+                <p>
+                  Summarize the provided document and highlight the most
+                  important points.
+                </p>
+
+                <div class="prompt-footer">
+                  <span>Documents</span>
+                  <button class="use-prompt">Use Prompt</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="prompt-card">
+              <div class="prompt-icon">▥</div>
+
+              <div class="prompt-card-content">
+                <h3>Report Generator</h3>
+                <p>
+                  Create a structured workplace report from the provided
+                  information.
+                </p>
+
+                <div class="prompt-footer">
+                  <span>Reports</span>
+                  <button class="use-prompt">Use Prompt</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="prompt-card">
+              <div class="prompt-icon">?</div>
+
+              <div class="prompt-card-content">
+                <h3>Explain a Topic</h3>
+                <p>
+                  Explain a technical or workplace topic in simple and
+                  easy-to-understand language.
+                </p>
+
+                <div class="prompt-footer">
+                  <span>Learning</span>
+                  <button class="use-prompt">Use Prompt</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="prompt-card">
+              <div class="prompt-icon">✓</div>
+
+              <div class="prompt-card-content">
+                <h3>Task Planner</h3>
+                <p>Break a workplace task into clear and manageable steps.</p>
+
+                <div class="prompt-footer">
+                  <span>Productivity</span>
+                  <button class="use-prompt">Use Prompt</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="prompt-card">
+              <div class="prompt-icon">⌕</div>
+
+              <div class="prompt-card-content">
+                <h3>Research Assistant</h3>
+                <p>
+                  Organize a research topic into key questions, points, and
+                  useful areas to investigate.
+                </p>
+
+                <div class="prompt-footer">
+                  <span>Research</span>
+                  <button class="use-prompt">Use Prompt</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-
         <footer class="footer">
-            <p>AI Employee Assistant Dashboard · Frontend Prototype</p>
+          <p>AI Employee Assistant Dashboard · Frontend Prototype</p>
         </footer>
-
-        </main>
-
+      </main>
     </div>
-
-</body>
+  </body>
 </html>
