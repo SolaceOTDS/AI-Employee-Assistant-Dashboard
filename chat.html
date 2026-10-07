@@ -1,215 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>AI Chat | AI Employee Assistant</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/chat.css" />
 
     <script src="js/main.js" defer></script>
     <script src="js/chat.js" defer></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <div class="logo-icon">AI</div>
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
+          <div>
+            <h2>AI Assistant</h2>
+            <span>Employee Portal</span>
+          </div>
+        </div>
 
-            <div class="logo">
-                <div class="logo-icon">AI</div>
+        <nav class="sidebar-nav">
+          <p class="nav-title">MAIN</p>
 
-                <div>
-                    <h2>AI Assistant</h2>
-                    <span>Employee Portal</span>
-                </div>
+          <a href="index.html" class="nav-item">
+            <span>⌂</span>
+            Dashboard
+          </a>
+
+          <a href="chat.html" class="nav-item active">
+            <span>✦</span>
+            AI Chat
+          </a>
+
+          <a href="prompts.html" class="nav-item">
+            <span>▣</span>
+            Prompt Library
+          </a>
+
+          <p class="nav-title">RESOURCES</p>
+
+          <a href="knowledge.html" class="nav-item">
+            <span>◈</span>
+            Knowledge Base
+          </a>
+
+          <a href="docs.html" class="nav-item">
+            <span>▤</span>
+            Documentation
+          </a>
+
+          <a href="analytics.html" class="nav-item">
+            <span>◒</span>
+            Analytics
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <a href="settings.html" class="nav-item">
+            <span>⚙</span>
+            Settings
+          </a>
+
+          <div class="user-mini">
+            <div class="avatar">RG</div>
+
+            <div>
+              <strong>Rishik</strong>
+              <small>Employee</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="main">
+        <header class="topbar">
+          <div class="page-info">
+            <h1>AI Chat</h1>
+            <p>Your intelligent workplace assistant.</p>
+          </div>
+
+          <div class="topbar-actions">
+            <button class="icon-btn">⌕</button>
+            <button class="icon-btn">♢</button>
+
+            <div class="profile">
+              <div class="avatar">RG</div>
+
+              <div>
+                <strong>Rishik Gouda</strong>
+                <small>Employee</small>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Chat -->
+        <section class="chat-container">
+          <div class="chat-header">
+            <div class="ai-avatar">✦</div>
+
+            <div>
+              <h2>AI Employee Assistant</h2>
+              <p>
+                Ask questions, summarize information, or create workplace
+                content.
+              </p>
             </div>
 
-            <nav class="sidebar-nav">
-
-                <p class="nav-title">MAIN</p>
-
-                <a href="index.html" class="nav-item">
-                    <span>⌂</span>
-                    Dashboard
-                </a>
-
-                <a href="chat.html" class="nav-item active">
-                    <span>✦</span>
-                    AI Chat
-                </a>
-
-                <a href="prompts.html" class="nav-item">
-                    <span>▣</span>
-                    Prompt Library
-                </a>
-
-                <p class="nav-title">RESOURCES</p>
-
-                <a href="knowledge.html" class="nav-item">
-                    <span>◈</span>
-                    Knowledge Base
-                </a>
-
-                <a href="docs.html" class="nav-item">
-                    <span>▤</span>
-                    Documentation
-                </a>
-
-                <a href="analytics.html" class="nav-item">
-                    <span>◒</span>
-                    Analytics
-                </a>
-
-            </nav>
-
-            <div class="sidebar-bottom">
-
-                <a href="settings.html" class="nav-item">
-                    <span>⚙</span>
-                    Settings
-                </a>
-
-                <div class="user-mini">
-                    <div class="avatar">RG</div>
-
-                    <div>
-                        <strong>Rishik</strong>
-                        <small>Employee</small>
-                    </div>
-                </div>
-
+            <div class="chat-status">
+              <span></span>
+              Online
             </div>
 
-        </aside>
+            <button id="clearChat" class="clear-chat">Clear Chat</button>
+          </div>
 
+          <!-- Messages -->
+          <div class="chat-messages" id="chatMessages">
+            <div class="message ai-message">
+              <div class="message-avatar">AI</div>
 
-        <!-- Main -->
-        <main class="main">
+              <div class="message-content">
+                <strong>AI Assistant</strong>
 
-            <header class="topbar">
-
-                <div class="page-info">
-                    <h1>AI Chat</h1>
-                    <p>Your intelligent workplace assistant.</p>
-                </div>
-
-                <div class="topbar-actions">
-
-                    <button class="icon-btn">⌕</button>
-                    <button class="icon-btn">♢</button>
-
-                    <div class="profile">
-                        <div class="avatar">RG</div>
-
-                        <div>
-                            <strong>Rishik Gouda</strong>
-                            <small>Employee</small>
-                        </div>
-                    </div>
-
-                </div>
-
-            </header>
-
-
-            <!-- Chat -->
-            <section class="chat-container">
-
-                <div class="chat-header">
-
-                    <div class="ai-avatar">✦</div>
-
-                    <div>
-                        <h2>AI Employee Assistant</h2>
-                        <p>
-                            Ask questions, summarize information,
-                            or create workplace content.
-                        </p>
-                    </div>
-
-                    <div class="chat-status">
-                        <span></span>
-                        Online
-                    </div>
-
-                </div>
-
-
-                <!-- Messages -->
-                <div class="chat-messages" id="chatMessages">
-
-                    <div class="message ai-message">
-
-                        <div class="message-avatar">AI</div>
-
-                        <div class="message-content">
-
-                            <strong>AI Assistant</strong>
-
-                            <p>
-                                Hello! I'm your AI Employee Assistant.
-                                How can I help you today?
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Suggestions -->
-                <div class="suggestions" id="chatSuggestions">
-
-                    <button class="suggestion">
-                        Summarize a document
-                    </button>
-
-                    <button class="suggestion">
-                        Write an email
-                    </button>
-
-                    <button class="suggestion">
-                        Create a report
-                    </button>
-
-                    <button class="suggestion">
-                        Explain a topic
-                    </button>
-
-                </div>
-
-
-                <!-- Input -->
-                <div class="chat-input-area">
-
-                    <textarea
-                        id="chatInput"
-                        placeholder="Ask the AI assistant anything..."
-                        rows="1"></textarea>
-
-                    <button id="sendButton" class="send-button">
-                        ↑
-                    </button>
-
-                </div>
-
-                <p class="chat-disclaimer">
-                    AI responses are simulated for this frontend prototype.
+                <p>
+                  Hello! I'm your AI Employee Assistant. How can I help you
+                  today?
                 </p>
+              </div>
+            </div>
+          </div>
 
-            </section>
+          <!-- Suggestions -->
+          <div class="suggestions" id="chatSuggestions">
+            <button class="suggestion">Summarize a document</button>
 
-        </main>
+            <button class="suggestion">Write an email</button>
 
+            <button class="suggestion">Create a report</button>
+
+            <button class="suggestion">Explain a topic</button>
+          </div>
+
+          <!-- Input -->
+          <div class="chat-input-area">
+            <textarea
+              id="chatInput"
+              placeholder="Ask the AI assistant anything..."
+              rows="1"
+            ></textarea>
+
+            <button id="sendButton" class="send-button">↑</button>
+          </div>
+
+          <p class="chat-disclaimer">
+            AI responses are simulated for this frontend prototype.
+          </p>
+        </section>
+      </main>
     </div>
-
-</body>
-
+  </body>
 </html>

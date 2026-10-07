@@ -35,6 +35,8 @@ promptGrid.addEventListener("click", function (event) {
 
   const selectedPrompt = prompts[promptTitle] || promptDescription;
 
+  addActivity("AI prompt used", promptTitle, "✦", "blue");
+
   window.location.href =
     "chat.html?prompt=" + encodeURIComponent(selectedPrompt);
 });

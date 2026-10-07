@@ -1,9 +1,76 @@
+function addActivity(title, description, icon, iconClass) {
+  const activities = JSON.parse(localStorage.getItem("recentActivity")) || [];
+
+  activities.unshift({
+    title: title,
+    description: description,
+    icon: icon,
+    iconClass: iconClass,
+    time: "Just now",
+  });
+
+  localStorage.setItem(
+    "recentActivity",
+    JSON.stringify(activities.slice(0, 10)),
+  );
+}
+
 if (document.getElementById("aiRequests")) {
+  const savedSettings = JSON.parse(localStorage.getItem("settings")) || {};
+
+  const userName = document.getElementById("userName");
+  const userRole = document.getElementById("userRole");
+
+  const topUserName = document.getElementById("topUserName");
+  const topUserRole = document.getElementById("topUserRole");
+  const welcomeName = document.getElementById("welcomeName");
+
+  if (userName && savedSettings.profileName) {
+    userName.textContent = savedSettings.profileName;
+  }
+
+  if (userRole && savedSettings.profileRole) {
+    userRole.textContent = savedSettings.profileRole;
+  }
+
+  if (topUserName && savedSettings.profileName) {
+    topUserName.textContent = savedSettings.profileName;
+  }
+
+  if (topUserRole && savedSettings.profileRole) {
+    topUserRole.textContent = savedSettings.profileRole;
+  }
+  if (welcomeName && savedSettings.profileName) {
+    welcomeName.textContent = savedSettings.profileName;
+  }
+  const greetingText = document.getElementById("greetingText");
+
+  if (greetingText) {
+    const hour = new Date().getHours();
+
+    if (hour >= 5 && hour < 12) {
+      greetingText.textContent = "Good morning";
+    } else if (hour >= 12 && hour < 17) {
+      greetingText.textContent = "Good afternoon";
+    } else {
+      greetingText.textContent = "Good evening";
+    }
+  }
+  const activityData = JSON.parse(localStorage.getItem("recentActivity")) || [];
+
+  const aiRequestCount = activityData.filter(function (activity) {
+    return activity.title === "AI request sent";
+  }).length;
+
+  const documentActivityCount = activityData.filter(function (activity) {
+    return activity.title === "Knowledge article opened";
+  }).length;
+
   const dashboardData = {
-    aiRequests: 127,
+    aiRequests: 127 + aiRequestCount,
     aiRequestsChange: "↑ 12% this week",
 
-    documents: 48,
+    documents: 48 + documentActivityCount,
     documentsChange: "8 updated recently",
 
     tasksToday: "08",
@@ -33,7 +100,7 @@ if (document.getElementById("aiRequests")) {
 
   document.getElementById("productivityChange").textContent =
     dashboardData.productivityChange;
-  const recentActivity = [
+  const defaultActivity = [
     {
       icon: "✦",
       iconClass: "blue",
@@ -63,6 +130,12 @@ if (document.getElementById("aiRequests")) {
       time: "2 hrs ago",
     },
   ];
+
+  const savedActivity =
+    JSON.parse(localStorage.getItem("recentActivity")) || [];
+
+  const recentActivity =
+    savedActivity.length > 0 ? savedActivity : defaultActivity;
 
   const activityList = document.getElementById("activityList");
 

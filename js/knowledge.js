@@ -149,6 +149,12 @@ knowledgeGrid.addEventListener("click", function (event) {
   }
 
   resourcePanel.style.display = "block";
+  addActivity(
+    "Knowledge article opened",
+    resourceTitle.textContent,
+    "◈",
+    "orange",
+  );
 
   resourcePanel.scrollIntoView({
     behavior: "smooth",

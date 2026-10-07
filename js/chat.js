@@ -4,7 +4,7 @@ const chatInput = document.getElementById("chatInput");
 const sendButton = document.getElementById("sendButton");
 const chatMessages = document.getElementById("chatMessages");
 
-function addMessage(text, type) {
+function addMessage(text, type, save = true) {
   const message = document.createElement("div");
   message.className = `message ${type}-message`;
 
@@ -30,7 +30,23 @@ function addMessage(text, type) {
   chatMessages.appendChild(message);
 
   chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  if (save) {
+    const chatHistory = JSON.parse(localStorage.getItem("chatHistory")) || [];
+
+    chatHistory.push({
+      text: text,
+      type: type,
+    });
+
+    localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
+  }
 }
+const savedChatHistory = JSON.parse(localStorage.getItem("chatHistory")) || [];
+
+savedChatHistory.forEach(function (message) {
+  addMessage(message.text, message.type, false);
+});
 
 function sendMessage() {
   const message = chatInput.value.trim();
@@ -42,6 +58,7 @@ function sendMessage() {
   addMessage(message, "user");
 
   chatInput.value = "";
+  addActivity("AI request sent", message, "✦", "blue");
 
   setTimeout(() => {
     let response =
@@ -114,3 +131,23 @@ const savedSettings = JSON.parse(localStorage.getItem("settings")) || {};
 if (savedSettings.promptSuggestions === false) {
   chatSuggestions.style.display = "none";
 }
+const clearChatButton = document.getElementById("clearChat");
+
+clearChatButton.addEventListener("click", function () {
+  localStorage.removeItem("chatHistory");
+
+  chatMessages.innerHTML = `
+    <div class="message ai-message">
+      <div class="message-avatar">AI</div>
+
+      <div class="message-content">
+        <strong>AI Assistant</strong>
+
+        <p>
+          Hello! I'm your AI Employee Assistant.
+          How can I help you today?
+        </p>
+      </div>
+    </div>
+  `;
+});

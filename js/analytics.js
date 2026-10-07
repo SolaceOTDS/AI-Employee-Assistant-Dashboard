@@ -1,7 +1,17 @@
+const activityData = JSON.parse(localStorage.getItem("recentActivity")) || [];
+
+const aiRequestCount = activityData.filter(function (activity) {
+  return activity.title === "AI request sent";
+}).length;
+
+const promptUsedCount = activityData.filter(function (activity) {
+  return activity.title === "AI prompt used";
+}).length;
+
 const analyticsData = {
-  totalAIRequests: 127,
+  totalAIRequests: 127 + aiRequestCount,
   documentsProcessed: 48,
-  promptsUsed: 73,
+  promptsUsed: 73 + promptUsedCount,
   productivityScore: "86%",
 };
 
